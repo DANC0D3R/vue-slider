@@ -1,4 +1,4 @@
-const slides = [
+/*const slides = [
 {
     image: 'img/01.webp',
         title: 'Marvel\'s Spiderman Miles Morale',
@@ -22,12 +22,14 @@ const slides = [
     }
 ];
 
-console.log(slides);
+console.log(slides);*/
+
+const { createApp } = Vue;
 
 createApp({
-    data(){
-        return{
-            current 0,
+    data() {
+        return {
+            current: 0,
             slides: [
                 {
                     image: 'img/01.webp',
@@ -39,6 +41,7 @@ createApp({
                     image: 'img/02.webp',
                     title: 'Ratchet & Clank: Rift Apart',
                     text: 'Go dimension-hopping with Ratchet and Clank as they take on an evil emperor from another reality.',
+                    active: ''
                 },
                 {
                     image: 'img/03.webp',
@@ -86,5 +89,8 @@ createApp({
                 return '';
             }
         },
+        select: function(index) {
+            this.current = index;
+        }
     }
 }).mount('#app')
