@@ -65,7 +65,7 @@ createApp({
         }
     },
     methods: {
-        nextImg: function() {
+        nextSlide: function() {
             if(this.current == this.slides.length - 1) {
                 this.current = 0;
             }
@@ -73,7 +73,7 @@ createApp({
                 this.current++;
             }
         },
-        prevImg: function() {
+        prevSlide: function() {
             if(this.current == 0) {
                 this.current = this.slides.length - 1;
             }
